@@ -1,0 +1,9 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/inforced/inforced.github.io.git",
+  "author": "Toby Ryuk <ryuk.toby@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
