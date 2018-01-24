@@ -29,7 +29,7 @@ module.exports = {
             }
           },
           {
-            loader: 'pug-html-loader?pretty&exports=false'
+            loader: 'pug-html-loader?exports=false'
           }
         ]
       },
@@ -50,6 +50,18 @@ module.exports = {
           // use style-loader in development
           fallback: 'style-loader'
         })
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [
+          {
+            loader: 'url-loader',
+            options: { 
+              limit: 8000,
+              name: 'images/[hash]-[name].[ext]'
+            } 
+          }
+        ]
       }
     ]
   },
