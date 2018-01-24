@@ -1,9 +1,11 @@
 const isProduction = process.env.NODE_ENV === 'production'
 
 const path = require('path')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const extractSass = new ExtractTextPlugin({
@@ -67,6 +69,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new CopyWebpackPlugin([
+      { from: 'src/config/CNAME' }
+    ]),
     extractSass,
     new UglifyJsPlugin(),
     new HtmlWebpackPlugin({
