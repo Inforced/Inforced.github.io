@@ -4,6 +4,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const extractSass = new ExtractTextPlugin({
     filename: 'inforced.[contenthash].css',
@@ -37,7 +38,10 @@ module.exports = {
         use: extractSass.extract({
           use: [
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: {
+                minimize: true
+              }
             },
             {
               loader: 'sass-loader'
@@ -52,6 +56,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     extractSass,
+    new UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.pug'
     })

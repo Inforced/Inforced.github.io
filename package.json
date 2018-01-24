@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "dev": "webpack-dev-server",
     "build": "NODE_ENV=production webpack"
   },
   "devDependencies": {
@@ -19,6 +20,8 @@
     "pug-html-loader": "^1.1.5",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0"
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
