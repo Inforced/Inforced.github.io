@@ -70,7 +70,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin([
-      { from: 'src/config/CNAME' }
+      { from: 'src/config/CNAME' },
+      { from: 'src/config/robots.txt' },
+      { from: 'src/favicons/*', to: '[name].[ext]' }
     ]),
     extractSass,
     new UglifyJsPlugin(),
