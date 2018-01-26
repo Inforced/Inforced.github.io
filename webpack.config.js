@@ -64,6 +64,14 @@ module.exports = {
             } 
           }
         ]
+      },
+      {
+        test: /\.(woff)$/,
+        use: [
+          {
+            loader: 'url-loader?limit=100000'
+          }
+        ]
       }
     ]
   },
