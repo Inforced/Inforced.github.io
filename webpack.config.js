@@ -80,6 +80,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'src/config/CNAME' },
       { from: 'src/config/robots.txt' },
+      { from: 'src/assets/card.png', to: 'images/[name].[ext]' },
       { from: 'src/favicons/*', to: '[name].[ext]' }
     ]),
     extractSass,

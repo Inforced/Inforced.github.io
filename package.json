@@ -30,6 +30,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "@ibm/type": "^0.5.3",
     "viewport-units-buggyfill": "^0.6.2"
   }
 }
