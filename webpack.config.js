@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const extractSass = new ExtractTextPlugin({
-    filename: 'css/inforced.[contenthash].css',
+    filename: 'inforced.[contenthash].css',
     disable: !isProduction
 })
 
@@ -17,7 +17,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/inforced.[hash].js'
+    filename: 'inforced.[hash].js'
   },
   module: {
     rules: [
