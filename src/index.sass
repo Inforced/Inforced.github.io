@@ -16,7 +16,7 @@ body
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
-.gilroy
+h1, h4
   font-family: Gilroy, 'Helvetica Neue', Arial, sans-serif
 
 .head
@@ -44,7 +44,7 @@ body
 .head-menu-list-item
   font-size: 20px
   max-width: 180px !important
-  min-width: 80 !important
+  min-width: 80px !important
   text-align: center
 
 .head-logo
@@ -63,3 +63,21 @@ body
   img
     margin-bottom: 10px
     width: 30px
+
+.services
+  margin: 150px auto
+  width: 60%
+
+@media screen and (max-width: 500px)
+  .services
+    width: 100%
+
+.service
+  font-size: 7em
+  margin: 10px auto
+
+.service:nth-child(even)
+  text-align: right
+
+.service:hover
+  color: #7448ff
