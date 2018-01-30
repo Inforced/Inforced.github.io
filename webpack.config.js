@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const extractSass = new ExtractTextPlugin({
-    filename: 'inforced.[contenthash].css',
+    filename: 'css/inforced.[contenthash].css',
     disable: !isProduction
 })
 
@@ -17,7 +17,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'inforced.[hash].js'
+    filename: 'js/inforced.[hash].js'
   },
   module: {
     rules: [
@@ -60,7 +60,7 @@ module.exports = {
             loader: 'url-loader',
             options: { 
               limit: 8000,
-              name: 'images/[hash]-[name].[ext]'
+              name: 'img/[name].[ext]'
             } 
           }
         ]
@@ -80,7 +80,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'src/config/CNAME' },
       { from: 'src/config/robots.txt' },
-      { from: 'src/assets/card.png', to: 'images/[name].[ext]' },
+      { from: 'src/assets/card.png', to: 'img/card.png' },
       { from: 'src/favicons/*', to: '[name].[ext]' }
     ]),
     extractSass,
