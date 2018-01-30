@@ -10,7 +10,9 @@ html(lang='sv')
             .head-menu
                 .head-menu-list
                     .head-menu-list-item
-                        h4 Om Oss
+                        h4
+                            a(href='#about' target='_top')
+                                | Om Oss
                     .head-menu-list-item
                         h4
                             a(href='mailto:contact@inforced.io' target='_top')
@@ -18,12 +20,13 @@ html(lang='sv')
             .head-logo
                 img(alt='Inforceds logotyp' src='./assets/logo.svg')
             .head-arrow
-                img(alt='Nedåtriktad pil' src='./assets/arrow.svg')
-        .services
+                a(href='#services' target='_top')
+                    img(alt='Nedåtriktad pil' src='./assets/arrow.svg')
+        .services#services
             h1.service Reklam
             h1.service Video
             h1.service Webb
-        .about
+        .about#about
             p
                 | Vi är en webbyrå lokaliserad i både Stockholm och Ängelholm.
                 | Med anpassade/skräddarsydda lösningar tar vi fram hemsidor, videor och sociala media lösningar för just ditt företag.
