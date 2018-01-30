@@ -15,7 +15,7 @@ body
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
-h1, h4
+h1, h2, h4
   font-family: Gilroy, 'Helvetica Neue', Arial, sans-serif
 
 .head
@@ -84,5 +84,47 @@ h1, h4
   color: #7448ff
 
 .about
-  font-size: 22px
+  font-size: 25px
   text-align: center
+  margin: 225px auto 75px
+  width: 40%
+
+@media screen and (max-width: 700px)
+  .about
+    width: 80%
+
+.footer
+  align-content: stretch
+  align-items: center
+  background-image: url('./assets/trees.jpg')
+  background-position: top center
+  background-size: cover
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 50vh
+
+.footer-empty
+  flex: 1
+
+.footer-contact
+  align-items: center
+  display: flex
+  flex: 1
+  justify-content: center
+  h2
+    border: 2px solid #fffefe
+    padding: 20px
+    font-size: 50px
+  h2:hover
+    border: 2px solid #7448ff
+    color: #7448ff
+
+.footer-logo
+  align-items: flex-end
+  display: flex
+  flex: 1
+  justify-content: center
+  img
+    margin-bottom: 10px
+    width: 100px
